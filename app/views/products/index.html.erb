@@ -1,0 +1,25 @@
+<h1>Index for Products</h1>
+<%= link_to("Create new product", { action: "new" }) %>
+<div class="products index">
+	<table>
+		<tr>
+			<th>Product</th>
+			<th>Price</th>
+			<th>Action</th>
+		</tr>
+		<% if !@products.empty? %>
+			<% @products.each do |product| %>
+			<tr>
+				<td class="center"><%= product.name %></td>
+				<td class="center"><%= "$#{product.price}" %></td>
+				<td class="actions">
+					<%= link_to("Edit", { action: "edit", id: product.id }) %>
+					<%= link_to("Delete", { action: "delete", id: product.id }) %>
+				</td>
+			</tr>
+			<% end %>
+		<% else %>
+			<td class="center", colspan="3">No Products Yet</td>
+		<% end %>
+	</table>
+</div>

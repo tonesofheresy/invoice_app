@@ -1,0 +1,21 @@
+<h1>Edit product</h1>
+
+<div class="products edit">
+	<%= form_for(:product, url: { action: "update", id: @product.id }) do |f| %>
+		<table summary="Product form fields">
+		<tr>
+			<th>Name</th>
+			<td><%= f.text_field(:name) %></td>
+		</tr>
+		<tr>
+			<th>Price</th>
+			<td><%= f.text_field(:price) %></td>
+		</tr>
+		</table>
+
+		<div class="form-button">
+			<%= submit_tag("Update Product") %>
+		</div>
+
+	<% end %>
+</div>

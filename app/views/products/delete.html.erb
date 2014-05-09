@@ -1,0 +1,11 @@
+<div class="products delete">
+	<h2>Delete Product</h2>
+	<%= form_tag({ action: "destroy", id: @product.id }) do %>
+		<p>Are you sure you want to permanently delete this product?</p>
+		<p><%= "#{@product.name} ($#{@product.price})" %>
+
+		<div>
+			<%= submit_tag("Delete Product") %>
+		</div>
+	<% end %>
+</div>
