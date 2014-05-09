@@ -15,10 +15,6 @@ ActiveRecord::Schema.define(version: 20140509032726) do
 
   create_table "invoices", force: true do |t|
     t.integer  "product_id"
-    t.string   "name"
-    t.decimal  "subtotal",   precision: 5, scale: 2
-    t.decimal  "tax",        precision: 3, scale: 1
-    t.decimal  "total",      precision: 5, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end

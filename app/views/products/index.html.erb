@@ -13,6 +13,7 @@
 				<td class="center"><%= product.name %></td>
 				<td class="center"><%= "$#{product.price}" %></td>
 				<td class="actions">
+					<%= link_to("Buy", { action: "show", id: product.id }) %>
 					<%= link_to("Edit", { action: "edit", id: product.id }) %>
 					<%= link_to("Delete", { action: "delete", id: product.id }) %>
 				</td>

@@ -1,0 +1,11 @@
+<div class="products show">
+	<h2>Purchase Product</h2>
+	<%= form_tag({ controller: "invoices", action: "create", product_id: @product.id }) do %>
+		<p>Would you like to create an invoice for this product?</p>
+		<p><%= "#{@product.name} ($#{@product.price})" %>
+
+		<div>
+			<%= submit_tag("Create Invoice") %>
+		</div>
+	<% end %>
+</div>

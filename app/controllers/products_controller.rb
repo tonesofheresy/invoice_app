@@ -20,6 +20,10 @@ class ProductsController < ApplicationController
   	@products = Product.cheapest_first
   end
 
+  def show
+    @product = Product.find(params[:id])
+  end
+
   def edit
   	@product = Product.find(params[:id])
   end
